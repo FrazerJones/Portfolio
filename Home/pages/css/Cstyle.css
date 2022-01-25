@@ -1,0 +1,450 @@
+@import url("https://use.typekit.net/jmk3xov.css");
+@media (max-width: 650px) {
+  :root {
+    max-width: 100%;
+    overflow-x: hidden;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    left: 0;
+  }
+  :root ::-webkit-scrollbar {
+    width: 0px;
+  }
+}
+
+body {
+  width: 100%;
+  position: relative;
+  font-family: Rockwell Nova, sans-serif;
+  margin: 0;
+  overflow: scroll;
+  overflow-x: hidden;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  /* Background animation code written by Alison Quaglia */
+  -webkit-animation: gradient 20s ease infinite;
+          animation: gradient 20s ease infinite;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body main {
+  padding: 30px 60px 30px 30px;
+  margin-bottom: 7%;
+  -webkit-animation: load 1s ease-in;
+          animation: load 1s ease-in;
+}
+
+@media (max-width: 650px) {
+  body main h1:first-of-type {
+    margin-left: 9%;
+  }
+}
+
+@media (max-width: 650px) {
+  body main {
+    margin-left: -3%;
+    padding: 30px 30px 30px 30px;
+    font-size: 4vw;
+    margin-bottom: 2%;
+    text-align: center;
+    padding-left: 5%;
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 1200px) {
+  body main {
+    margin-bottom: calc(100% - 90vw);
+  }
+}
+
+@media (max-width: 1000px) {
+  body main {
+    margin-bottom: calc(100% - 85vw);
+  }
+}
+
+@media (max-width: 800px) {
+  body main {
+    margin-bottom: calc(100% - 80vw);
+  }
+}
+
+body main p:first-of-type {
+  margin-left: 3px;
+}
+
+@media (max-width: 650px) {
+  body main p:first-of-type {
+    font-size: 3vw;
+  }
+}
+
+body main input {
+  -webkit-transition: ease, border-bottom 3s ease;
+  transition: ease, border-bottom 3s ease;
+  width: 100%;
+  border: none;
+  border-bottom: 1px dashed red;
+  outline: none;
+  padding-bottom: 5px;
+  background-color: transparent;
+}
+
+body main textarea {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #6effff;
+  outline: none;
+  padding: 10px;
+  background-color: transparent;
+  resize: none;
+}
+
+body main label {
+  display: block;
+  margin: 6px;
+}
+
+body main button {
+  cursor: pointer;
+  width: 100px;
+  border: none;
+  outline: none;
+  background-color: #00ce00;
+  color: aliceblue;
+}
+
+body main button:hover {
+  background-color: #7bff00;
+  color: black;
+}
+
+body footer {
+  opacity: 0;
+  -webkit-animation: load 1s ease-in 1s forwards;
+          animation: load 1s ease-in 1s forwards;
+  margin-left: -2%;
+  color: white;
+  width: 100%;
+  background-color: rgba(66, 66, 66, 0.863);
+  padding: 0px 5%;
+  text-align: left;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60% 25% 15%;
+      grid-template-columns: 60% 25% 15%;
+}
+
+@media (max-width: 650px) {
+  body footer {
+    -ms-grid-columns: 45% 25% 30%;
+        grid-template-columns: 45% 25% 30%;
+    bottom: 0;
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+body footer p {
+  font-size: 1vw;
+}
+
+@media (max-width: 650px) {
+  body footer p {
+    font-size: 2vw;
+  }
+}
+
+body footer h2 {
+  font-size: 1.5vw;
+}
+
+@media (max-width: 650px) {
+  body footer h2 {
+    font-size: 3vw;
+  }
+}
+
+body footer li {
+  font-size: 1vw;
+}
+
+@media (max-width: 650px) {
+  body footer li {
+    font-size: 2vw;
+  }
+}
+
+body footer:first-child {
+  grid-column: 0 / 1;
+}
+
+body footer:nth-child(2) {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+}
+
+body footer:last-child {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+}
+
+.contact {
+  color: white;
+  padding: 30px;
+  background-color: rgba(77, 77, 77, 0.863);
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  margin-left: 3px;
+}
+
+@media (min-width: 650px) {
+  .contact {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 70% 5% 25%;
+        grid-template-columns: 70% 5% 25%;
+  }
+}
+
+.contact .email {
+  font-size: 1vw;
+}
+
+@media (max-width: 650px) {
+  .contact .email {
+    font-size: 3vw;
+    text-align: center;
+    margin-left: -7%;
+  }
+}
+
+.contact .email h1 {
+  font-size: 2vw;
+  -webkit-text-decoration: dotted underline;
+          text-decoration: dotted underline;
+}
+
+@media (max-width: 650px) {
+  .contact .email h1 {
+    font-size: 4vw;
+  }
+}
+
+.contact .email .subject {
+  width: 100%;
+  text-align: center;
+}
+
+.contact .info {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+  font-size: 1vw;
+}
+
+@media (max-width: 650px) {
+  .contact .info {
+    display: none;
+  }
+}
+
+.contact .info h1 {
+  font-size: 2vw;
+  -webkit-text-decoration: dotted underline;
+          text-decoration: dotted underline;
+}
+
+a {
+  color: white;
+  -webkit-text-decoration: solid underline 1px white;
+          text-decoration: solid underline 1px white;
+}
+
+a:hover {
+  color: beige;
+}
+
+.inputRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 2%;
+}
+
+.inputRow .inputGroup {
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+}
+
+.FC:first-child {
+  color: white;
+  -webkit-text-decoration: underline dashed 2px;
+          text-decoration: underline dashed 2px;
+  font-style: bold;
+}
+
+#status {
+  background-color: transparent;
+  text-align: center;
+}
+
+#status.success {
+  background-color: greenyellow;
+  -webkit-animation: status 4s ease forwards;
+          animation: status 4s ease forwards;
+}
+
+#status.error {
+  background-color: red;
+  -webkit-animation: status 4s ease forwards;
+          animation: status 4s ease forwards;
+}
+
+@-webkit-keyframes status {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@keyframes status {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.wrapper {
+  /*This part is important for centering*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.typewriter h1 {
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid #353535;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .10em;
+  /* Adjust as needed */
+  -webkit-animation: typing 2s steps(40, end), blink-caret 1s step-end infinite;
+          animation: typing 2s steps(40, end), blink-caret 1s step-end infinite;
+}
+
+input:focus, input:valid {
+  border-bottom: 1px greenyellow solid;
+}
+
+h1, h2, h3, blockquote {
+  font-family: Rockwell Nova, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@-webkit-keyframes load {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes load {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+/* The typing effect */
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@-webkit-keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #353535;
+  }
+}
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #353535;
+  }
+}
+/*# sourceMappingURL=Cstyle.css.map */

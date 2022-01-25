@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="apple-touch-icon" sizes="180x180" href="Images/Favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="Images/Favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="Images/Favicon/favicon-16x16.png">
+        <meta name="viewport" content="user-scalable=0"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/Pstyle.css">
+        <title>Frazer's Portfolio Website</title>
+    </head>
+    <body>  
+        <header>
+            <h1 id="title"></h1>
+            <h3>This page displays all noteworthy projects that i have been a part of. You can click each section to expand it and use the links to learn more about each project. All of my current projcts have been done on my own time for my own use.</h3>
+        </header>
+        <main>
+            <form>
+                <input type="text" placeholder="Search... (Case sensitive)">
+                <button type="button" onclick="searchRes()">Apply Search</button>
+            </form>
+            <section onclick="expand(this, 1)">
+                <div>
+                    <h1> This Portfolio Website </h1>
+                    <p> The basic idea for this project of mine was to learn new (and develop existing) skills in order to create one space that takes on lots of different layouts and designs that acts as a platform to host my work, information about myself, and responsive interactive content (such as a contact page). This took the form of a portfolio website that has four main pages: Home, About Me, Projects and Contact Me. </p>
+                    <p> Links: Github｜Homepage </p>
+                    <div>
+                        <img src="images/drop.png" alt="Drop down arrow">
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="Images/Favicon/apple-touch-icon.png" alt="Project Image">
+                </div>
+            </section>
+            <section onclick="expand(this, 2)">
+                <div>
+                    <h1> Cuss Word Censoring Chrome Extension </h1>
+                    <p> For this project, I had the goal of building a chrome extension that would read the words on any given webpage as it is loaded and censor any cuss words from a set list in compliance with the users censor preferences. In order to accomplish this, I had to learn and successfully implement crucial chrome extension API (such as local storage) on top of my HTML, javascript and CSS. </p>
+                    <p> Links: Github</p>
+                    <div>
+                        <img src="images/bdrop.png" alt="Drop down arrow">
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="Images/CussIcon.png" alt="Project Image">
+                </div>
+            </section>
+            <section>
+                <div>
+                    <h1> Reaction Test Chrome Extension </h1>
+                    <p> This project was the creation of a simple chrome extension that would act as an on-demand reaction time test for the user. It works with the straightforward implementation of a button and timer, along with some more HTML, javascript and CSS, to let the user start a reaction time test from their browser with an easy-to-use interface and accurately display their reaction time to pressing a button after it changes colour.  </p>
+                    <p> Links: Github</p>
+                </div>
+                <div class="image">
+                    <img src="Images/TestIcon.png" alt="Project Image">
+                </div>
+            </section>
+            <section>
+                <h1> 4 </h1>
+            </section>
+            <section>
+                <h1> 5 </h1>
+            </section>
+            <section>
+                <h1> 6 </h1>
+            </section>
+        </main>
+        <footer>
+            <div>
+                <h2 class="FC">Info</h2>
+                <p>Thank you for reading through my website. Please click the links to the right to navigate around and feel free to contact me either using the contact information or
+                    by viewing the 'Contact Me' Page. This is my first project so i hope you like it and im always aiming to improve. Dont hesitate to check out my other projects or suggest improvements. 
+                    <br>
+                    <i>This website was coded fully in visual studio</i> 
+                  </p>
+            </div>
+            <div>
+                <h2 class="FC">Contact</h2>
+                <ul>
+                    <li>frazerjjones.mail @gmail.com</li>
+                    <li>Phone number: 07726132955</li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="FC">Links</h2>
+                <ul>
+                    <li><a href="../Home.html">Home</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="About.html">About Me</a></li>
+                    <li><a href="https://github.com/FrazerJones"  target="_blank">Github</a></li>
+                  </ul>
+            </div>
+        </footer>
+        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+        <script>
+            var search = ["", "", "", "", "", ""];
+            var clicked = [false, false, false, false, false, false, false];
+            var prevText = ["", "", "", "", "", "", "", ""];
+            var prevImg = ["", "", "", "", "", "", "", ""];
+            var text = "";
+            var img = "";
+            var app = document.getElementById('title');
+
+            var typewriter = new Typewriter(app, {
+                loop: false
+            });
+
+            typewriter.typeString('Projects.')
+                .pauseFor(2500)
+                .deleteChars(1)
+                .pauseFor(500)
+                .typeString('<strong>!</strong>')
+                .pauseFor(2500)
+                .start();
+
+
+            function expand(ctrl, i) {
+                text = ctrl.getElementsByTagName('p')[0].innerHTML;
+                img = ctrl.getElementsByTagName('div')[1].innerHTML;
+                if (i == 1) {
+                    if (clicked[i] == false) {
+                        prevText[i] = text;
+                        prevImg[i] = img;
+                        clicked[i] = true;
+                        ctrl.getElementsByTagName('p')[0].innerHTML = (text + "<br><br>I decided to achieve this goal by not utilising tools such as WordPress and Boostrap and instead relying on my skills programming HTML, CSS (With the help of SCSS) and Javascript. I chose to do this because I believe it not only helped me hone my skills in these languages but also create a website that was more unique to me and could display my skills to myself and as part of a project showcase.<br><br>Each page has a specific purpose and an easy to understand layout that gives users full control. User experience was considered at every stage and all information is displayed in a simple and logical manner for the ideal reading case. The HTML and CSS make good use of colour, responsive scale sizing and styles to bring the content on the page to the best attention of the user.<br><br>The Javascript is simple but effective in its design. Each page uses Javascript as part of its design with some specific pages relying on it more heavily. The Contact Me page has a fully working form that sends me emails directly and the projects page has an efficient searching tool that a user can easily use to help navigate through my projects. The Website is also fully mobile responsive with unique tailored page designs for mobile and desktop users.")
+                        ctrl.getElementsByTagName('div')[1].innerHTML = ("")
+                    }
+                    else {
+                        clicked[i] = false;
+                        ctrl.getElementsByTagName('p')[0].innerHTML = prevText[i];
+                        ctrl.getElementsByTagName('div')[1].innerHTML = prevImg[i];
+                    }
+                }
+                if (i == 2) {
+                    if (clicked[i] == false) {
+                        prevText[i] = text;
+                        prevImg[i] = img;
+                        clicked[i] = true;
+                        ctrl.getElementsByTagName('p')[0].innerHTML = (text + "<br><br>The chrome extensions function is simple and has an easy to understand interface. The user can simply select a censor option from a list of four (Partial Censor, Full Censor, Replace and Disable) and the extension will automatically read through each page that is loaded while the extension is activated and commit the appropriate action on each cuss word encountered.");
+                        ctrl.getElementsByTagName('div')[1].innerHTML = ("")
+                    }
+                    else {
+                        clicked[i] = false;
+                        ctrl.getElementsByTagName('p')[0].innerHTML = prevText[i];
+                        ctrl.getElementsByTagName('div')[1].innerHTML = prevImg[i];
+                    }
+                }
+            }
+
+            for (var i = 0; i < search.length; i++) {
+                document.getElementsByTagName('section')[i].id = document.getElementsByTagName('section')[i].getElementsByTagName("h1")[0].innerHTML
+
+                search[i] = document.getElementsByTagName('section')[i].id
+            }
+
+            function searchRes() {
+                var query = document.getElementsByTagName("input")[0].value;
+                for (var i = 0; i < search.length; i++) {
+                    if (search[i].includes(query) == true) {
+                        document.getElementById(search[i]).style.display = "grid";
+                    }
+                    else {
+                        document.getElementById(search[i]).style.display = "none";
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

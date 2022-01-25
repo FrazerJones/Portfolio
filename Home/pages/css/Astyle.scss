@@ -1,0 +1,410 @@
+@import url("https://use.typekit.net/jmk3xov.css");
+
+:root {
+  @media (max-width: 800px) {
+    max-width: 100%;
+    overflow-x: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+         left: 0;
+    ::-webkit-scrollbar {
+    width: 0px;
+    }
+  }
+}
+
+body {
+  position: relative;
+  font-family: Rockwell Nova, sans-serif;
+  margin: 0;
+  overflow: scroll;
+  overflow-x: hidden;
+  background-color: rgb(70, 70, 70);
+  main {
+    padding: 30px 60px 30px 30px;
+    margin-bottom: 7%;
+    color: white;
+    @media (max-width: 800px) {
+      text-align: center;
+    }
+  }
+
+  li {
+    @media (max-width: 800px) {
+      text-align: left;
+    }
+  }
+
+  #title {
+    @media (max-width: 800px) {
+      margin-left: 15%;
+    }
+  }
+  
+  footer {
+    margin-left: -2%;
+    width: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.644);
+    padding: 0px 5%;
+    text-align: left;
+    display: grid;
+    grid-template-columns: 60% 25% 15%;
+    @media (max-width: 800px) {
+      grid-template-columns: 50% 25% 25%;
+      width: 100%;
+      left: 0;
+    }
+    p {
+      font-size: 1vw;
+      @media (max-width: 800px) {
+        font-size: 2vw;
+      }
+    }
+    h2 {
+      font-size: 1.5vw;
+      @media (max-width: 800px) {
+        font-size: 3vw;
+      }
+    }
+    li {
+      font-size: 1vw;
+      @media (max-width: 800px) {
+        font-size: 2vw;
+      }
+    }
+    &:first-child {
+      grid-column: 0 / 1;
+    }
+    &:nth-child(2) {
+      grid-column: 1 / 2;
+    }
+    &:last-child {
+      grid-column: 2 / 3;
+      min-width: 50px;
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #23d5ab; 
+  border-radius: 10px;
+  border: 1px solid #23a6d5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #23a6d5; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(28, 124, 202); 
+}
+
+.content {
+  display: grid;
+  grid-template-rows: auto;
+  margin-top: -20px;
+  color: white;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.644);
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  @media (max-width: 800px) {
+    margin-left: 2%;
+  }
+  section:first-of-type {
+    padding-bottom: 5%;
+    @media (min-width: 800px) {
+      display: grid;
+      grid-template-columns: 47.5% 5% 47.5%;
+    }
+    div:first-of-type {
+      grid-column: 1 / 2;
+    }
+    div:last-of-type {
+      grid-column: 3 / 4;
+      display: grid;
+      grid-template-rows: 50% 50%;
+      .image {
+        grid-column: 1 / 2;
+        display: block;
+        width: 100%;
+        height: 100%;
+    
+        background-image: url(../Images/ghost2.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        animation: ghost 2s 1s ease-in forwards;
+      }
+    }
+  }
+  section:nth-of-type(2) {
+    border-bottom: 5%;
+    @media (max-width: 800px) {
+      padding-bottom: 20%;
+      border-bottom: #23d5ab8c dashed 1px;
+    }
+  }
+  section:last-of-type {
+    @media (min-width: 1000px) {
+      display: grid;
+      grid-template-columns: 30% 5% 65%;
+    }
+    #clockContainer {
+      @media (max-width: 1000px) {
+        display: none;
+      }
+      grid-column: 1 / 2;
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      margin: auto;
+      background: url(../Images/clock.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      #hour,
+      #minute,
+      #second {
+        position: absolute;
+        background: black;
+        border-radius: 10px;
+        transform-origin: bottom;
+      }
+  
+      #hour {
+        width: 1.8%;
+        height: 25%;
+        top: 25%;
+        left: 48.85%;
+        opacity: 0.8;
+      }
+  
+      #minute {
+        width: 1.6%;
+        height: 30%;
+        top: 19%;
+        left: 48.9%;
+        opacity: 0.8;
+      }
+  
+      #second {
+       width: 1%;
+       height: 40%;
+       top: 9%;
+       left: 49.25%;
+       opacity: 0.8;
+      }
+    }
+    div:last-of-type {
+      grid-column: 3 / 4;
+    }
+  }
+}
+
+.FC:first-child {
+  color: white;
+  text-decoration: underline dashed 2px;
+  font-style: bold;
+}
+
+a {
+  color: white;
+  text-decoration: solid underline 1px white;
+  &:hover {
+      color: beige;
+  }
+}
+
+blockquote {
+  @media (max-width: 800px) {
+    display: none;
+  }
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+blockquote p {
+  background-color: white;
+  color: black;
+  font-size: 2vw;
+  display: inline;
+}
+
+ol {
+  column-count: 2;
+}
+
+
+input:focus, input:valid {
+  border-bottom: 1px greenyellow solid;
+}
+
+h1, h2, h3, blockquote {
+  font-family: Rockwell Nova, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+$bubble-count: 50;
+$sway-type: "sway-left-to-right", "sway-right-to-left";
+
+@function random_range($min, $max) {
+  $rand: random();
+  $random_range: $min + floor($rand * (($max - $min) + 1));
+  @return $random_range;
+}
+
+@function sample($list) {
+  @return nth($list, random(length($list)));
+}
+
+.bubbles {
+  position: fixed;
+  bottom: 0;
+  z-index: -99999;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bubble {
+  position: absolute;
+  left: var(--bubble-left-offset);
+  bottom: -75%;
+  display: block;
+  width: var(--bubble-radius);
+  height: var(--bubble-radius);
+  border-radius: 50%;
+  animation: float-up var(--bubble-float-duration) var(--bubble-float-delay) ease-in infinite;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: hsla(183, 94%, 76%, 0.3);
+    border-radius: inherit;
+    animation: var(--bubble-sway-type) var(--bubble-sway-duration) var(--bubble-sway-delay) ease-in-out alternate infinite;
+  }
+
+  @for $i from 0 through $bubble-count {
+    &:nth-child(#{$i}) {
+      --bubble-left-offset: #{random_range(0vw, 100vw)};
+      --bubble-radius: #{random_range(1vw, 10vw)};
+      --bubble-float-duration: #{random_range(6s, 12s)};
+      --bubble-sway-duration: #{random_range(4s, 6s)};
+      --bubble-float-delay: #{random_range(0s, 4s)};
+      --bubble-sway-delay: #{random_range(0s, 4s)};
+      --bubble-sway-type: #{sample($sway-type)};
+    }
+  }
+}
+
+@keyframes float-up {
+  to {
+    transform: translateY(-175vh);
+  }
+}
+
+@keyframes sway-left-to-right {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes sway-right-to-left {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #23d5ab 50%, #23a6d5 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+.wrapper {
+  margin-bottom: 20px;
+  margin-left: 2px;
+  /*This part is important for centering*/
+  display: flex;
+  align-items: left;
+  justify-content: left;
+}
+
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid rgb(182, 182, 182); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .10em; /* Adjust as needed */
+  animation: 
+    typing 2s steps(40, end),
+    blink-caret 1s step-end infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(182, 182, 182); }
+}
+
+@keyframes ghost {
+  0% {
+    background-image: url(../Images/ghost2.png);
+  }
+  100% {
+    background-image: url(../Images/ghost.png);
+  }
+}

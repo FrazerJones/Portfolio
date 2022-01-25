@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <head>
+            <meta charset="UTF-8" />
+            <link rel="apple-touch-icon" sizes="180x180" href="Images/Favicon/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="Images/Favicon/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="Images/Favicon/favicon-16x16.png">
+            <meta name="viewport" content="user-scalable=0"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="css/Cstyle.css">
+            <title>Frazer's Portfolio Website</title>
+          </head>
+          <main>
+            <div>
+              <h1 id="title"></h1>
+              <p>Please get in touch and email me directly about any inquireies. I look forward to hearing from you!</p>
+            </div>
+              <div class="contact">
+                <div class="email">
+                  <h1>Email</h1>
+                  <form action="https://formspree.io/f/mgeryweg" method="POST" id="myForm">
+                    <div class="inputRow">
+                      <div class="inputGroup">
+                        <label>Name:</label>
+                        <input id="name" type="text" name="Name" required>
+                      </div>
+                      <div class="inputGroup">
+                        <label>Email:</label>
+                        <input id="email" type="email" name="Email" required>
+                      </div>
+                    </div>
+                      <div class="inputGroup">
+                        <label class="subject">Subject:</label>
+                        <input id="subject" class="subject" type="text" name="Subject" autocomplete="off" required>
+                      </div>
+                    <label>Message:</label>
+                    <textarea id="message" rows="10" name="Message" required></textarea>
+                    <button type="submit" onclick="clear()" enabled>Send</button>
+                  </form>
+                  <div id="status">
+                    <p></p>
+                  </div>
+                </div>
+                <div class="info">
+                  <h1>Contact Info</h1>
+                  <ul>
+                    <li>Email: frazerjjones.mail @gmail.com</li>
+                    <li>Phone number: 07726132955</li>
+                  </ul>
+                  <h1>Page links</h1>
+                  <ul>
+                    <li><a href="../Home.html">Home</a></li>
+                    <li><a href="Projects.html">Projects</a></li>
+                    <li><a href="About.html">About Me</a></li>
+                    <li><a href="https://github.com/FrazerJones"  target="_blank">Github</a></li>
+                  </ul>
+                </div>  
+              </div>
+          </main>
+          <footer>
+            <div>
+                <h2 class="FC">Info</h2>
+                <p>Thank you for reading through my website. Please click the links to the right to navigate around and feel free to contact me either using the contact information or
+                  by viewing the 'Contact Me' Page. This is my first project so i hope you like it and im always aiming to improve. Dont hesitate to check out my other projects or suggest improvements. 
+                  <br>
+                  <i>This website was coded fully in visual studio</i> 
+                </p>
+            </div>
+            <div>
+                <h2 class="FC">Contact</h2>
+                <ul>
+                    <li>frazerjjones.mail @gmail.com</li>
+                    <li>Phone number: 07726132955</li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="FC">Links</h2>
+                <ul>
+                  <li><a href="../Home.html">Home</a></li>
+                  <li><a href="Projects.html">Projects</a></li>
+                  <li><a href="About.html">About Me</a></li>
+                  <li><a href="https://www.github.com"  target="_blank">Github</a></li>
+                </ul>
+            </div>
+        </footer>
+
+          <script type="module" src="/main.js"></script>
+          <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+          <script>
+              var app = document.getElementById('title');
+  
+              var typewriter = new Typewriter(app, {
+                  loop: false
+              });
+  
+              typewriter.typeString('Contact Me.')
+                  .pauseFor(2500)
+                  .deleteChars(1)
+                  .pauseFor(500)
+                  .typeString('<strong>!</strong>')
+                  .pauseFor(2500)
+                  .start();
+
+                function clear() {
+                  document.getElementById('name').value = '';
+                  document.getElementById('email').value = '';
+                  document.getElementById('subject').value = '';
+                  document.getElementById('message').value = '';
+                }
+          </script>
+
+    </body>
+</html>
+

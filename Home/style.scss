@@ -1,0 +1,391 @@
+@import url("https://use.typekit.net/jmk3xov.css");
+
+:root {
+  --dark-bg: rgba(15, 15, 15, 0.95);
+  --spacing: 20vh;
+  --scale: 1;
+  @media (max-width: 540px) {
+    --spacing: 2vh;
+  }
+
+  font-family: Rockwell Nova, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  scroll-behavior: smooth;
+  @media (max-width: 540px) {
+    max-width: 100%;
+    overflow-x: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    left: 0;
+  }
+}
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+}
+
+h1,
+h2 {
+  font-weight: normal;
+}
+
+@viewport {
+  width: device-width;
+  zoom: 1;
+}
+@-ms-viewport {
+  width: device-width;
+}
+
+body {
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+  #element::-webkit-scrollbar {
+    display: none;
+  }
+  margin: 0;
+}
+
+#skyboxWrapper {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  #skybox {
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    background-image: url(images/space.jpg);
+    background-size: 100% auto;
+  }
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  margin: 0px;
+  padding: 120px 0px;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  @media (max-width: 540px) {
+    grid-template-columns: 5% 90% 50%;
+    margin-top: -5%;
+    max-width: 100vw;
+    position: relative;
+  }
+}
+
+h1,
+h2,
+h3,
+blockquote {
+  z-index: 2;
+  font-family: Rockwell Nova, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  position: relative;
+}
+
+p {
+  z-index: 2;
+}
+
+a {
+  z-index: 2;
+  color: white;
+  text-decoration: underline bold;
+  &:hover {
+    color: rgb(139, 139, 139);
+  }
+}
+
+canvas {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+header {
+  transform: scale(var(--scale));
+  z-index: 2;
+  margin-top: -10%;
+  background: var(--dark-bg);
+  grid-column: 2 / span 5;
+  @media (max-width: 540px) {
+    grid-column: 2 / 3;
+    margin-top: -20%;
+  }
+  padding: 2%;
+  margin-bottom: calc(var(--spacing) + 10%);
+  text-align: center;
+  h1,
+  h4 {
+    font-size: 4vw;
+    @media (max-width: 540px) {
+      font-size: 8vw;
+    }
+  }
+  p {
+    font-size: 1.2vw;
+    @media (max-width: 540px) {
+      font-size: 3vw;
+    }
+  }
+}
+
+section {
+  z-index: 2;
+  grid-column: 2 / 8;
+  padding: 1vw;
+  background: var(--dark-bg);
+  font-size: 1.25vw;
+  line-height: 1.5;
+  margin-bottom: var(--spacing);
+  @media (max-width: 540px) {
+    grid-column: 2 / 3;
+    font-size: 2.5vw;
+  }
+}
+
+blockquote {
+  z-index: 2;
+  font-size: 3vw;
+  margin: 0;
+  padding: 0;
+  grid-column: 2 / span 9;
+  margin-bottom: var(--spacing);
+  @media (max-width: 540px) {
+    grid-column: 2 / 3;
+    font-size: 6vw;
+  }
+}
+
+blockquote p {
+  z-index: 2;
+  color: black;
+  background-color: white;
+  font-size: 3vw;
+  display: inline;
+  line-height: 1;
+  @media (max-width: 540px) {
+    font-size: 6vw;
+  }
+}
+
+.footer {
+  z-index: 2;
+  margin: -2%;
+  margin-left: -18%;
+  background-color: rgba(87, 87, 87, 0.95);
+  color: white;
+  padding: 0px 5%;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 60% 25% 15%;
+  width: 200%;
+  @media (max-width: 540px) {
+    grid-template-columns: 50% 25% 25%;
+    margin-left: -9%;
+    width: 110%;
+  }
+  p {
+    font-size: 1vw;
+    @media (max-width: 540px) {
+      font-size: 2vw;
+    }
+  }
+  h2 {
+    font-size: 1.5vw;
+    @media (max-width: 540px) {
+      font-size: 3vw;
+    }
+  }
+  li {
+    font-size: 1vw;
+    @media (max-width: 540px) {
+      font-size: 2vw;
+    }
+  }
+}
+
+.footer:first-child {
+  grid-column: 0 / 1;
+}
+
+.footer:nth-child(2) {
+  grid-column: 1 / 2;
+}
+
+.footer:last-child {
+  grid-column: 2 / 3;
+}
+
+.FC:first-child {
+  color: white;
+  text-decoration: underline dashed 2px;
+  font-style: bold;
+}
+
+.left {
+  grid-column: 6 / 12;
+  margin-bottom: calc(var(--spacing) - 5%);
+  @media (max-width: 540px) {
+    grid-column: 2 / 3;
+  }
+}
+
+#thanks {
+  font-size: 2.5vw;
+  @media (max-width: 540px) {
+    margin-top: 5%;
+  }
+}
+
+#forceTop {
+  @media (min-width: 540px) {
+    z-index: 2;
+    position: absolute;
+    right: 2%;
+    top: -1%;
+    svg {
+      position: absolute;
+      right: -10%;
+      top: 7%;
+      animation: bounce 2s ease-in-out infinite;
+    }
+  }
+  display: none;
+}
+
+#forceBottom {
+  @media (min-width: 540px) {
+    z-index: 3;
+    text-decoration: none;
+    background-color: transparent;
+    position: fixed;
+    right: 2.5%;
+    bottom: 0;
+    p {
+      font-size: 1.5vw;
+    }
+    svg {
+      position: fixed;
+      right: 0.3%;
+      bottom: 3%;
+    }
+  }
+  display: none;
+}
+
+$bubble-count: 10;
+$sway-type: "sway-left-to-right", "sway-right-to-left";
+
+@function random_range($min, $max) {
+  $rand: random();
+  $random_range: $min + floor($rand * (($max - $min) + 1));
+  @return $random_range;
+}
+
+@function sample($list) {
+  @return nth($list, random(length($list)));
+}
+
+.bubbles {
+  margin-left: 0;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bubble {
+  position: absolute;
+  left: var(--bubble-left-offset);
+  bottom: -75%;
+  display: block;
+  width: var(--bubble-radius);
+  height: var(--bubble-radius);
+  border-radius: 50%;
+  animation: float-up var(--bubble-float-duration) var(--bubble-float-delay)
+    ease-in infinite;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -5%;
+    width: 100%;
+    height: 100%;
+    background: hsla(0, 0%, 100%, 0.3);
+    border-radius: inherit;
+    animation: var(--bubble-sway-type) var(--bubble-sway-duration)
+      var(--bubble-sway-delay) ease-in-out alternate infinite;
+  }
+
+  @for $i from 0 through $bubble-count {
+    &:nth-child(#{$i}) {
+      --bubble-left-offset: #{random_range(0vw, 100vw)};
+      --bubble-radius: #{random_range(1vw, 10vw)};
+      --bubble-float-duration: #{random_range(10s, 16s)};
+      --bubble-sway-duration: #{random_range(4s, 6s)};
+      --bubble-float-delay: #{random_range(0s, 4s)};
+      --bubble-sway-delay: #{random_range(0s, 4s)};
+      --bubble-sway-type: #{sample($sway-type)};
+    }
+  }
+}
+
+@keyframes float-up {
+  to {
+    transform: translateY(-175vh);
+  }
+}
+
+@keyframes sway-left-to-right {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes sway-right-to-left {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    top: 7%;
+  }
+  50% {
+    top: 21%;
+  }
+  100% {
+    top: 7%;
+  }
+}
